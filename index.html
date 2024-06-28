@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1.0" />
+    <title>image-CBSS</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>image-CBSS</h1>
+    <div class="fx-slider">
+      <label for="ct"><span class="first-letter">C</span>ontrast</label>
+      <div>
+        <input
+          id="ct"
+          name="ct"
+          type="range"
+          min="0"
+          max="200"
+          value="100"
+          onchange="changeFilter()"
+        />
+        <div class="helper">0 - 200 (default: 100)</div>
+      </div>
+    </div>
+    <div class="fx-slider">
+      <label for="br"><span class="first-letter">B</span>rightness</label>
+      <div>
+        <input
+          id="br"
+          name="br"
+          type="range"
+          min="0"
+          max="200"
+          value="100"
+          onchange="changeFilter()"
+        />
+        <div class="helper">0 - 200 (default: 100)</div>
+      </div>
+    </div>
+    <div class="fx-slider">
+      <label for="st"><span class="first-letter">S</span>aturation</label>
+      <div>
+        <input
+          id="st"
+          name="st"
+          type="range"
+          min="0"
+          max="200"
+          value="100"
+          onchange="changeFilter()"
+        />
+        <div class="helper">0 - 200 (default: 100)</div>
+      </div>
+    </div>
+    <div class="fx-slider">
+      <label for="sh"><span class="first-letter">S</span>harpness</label>
+      <div>
+        <input
+          id="sh"
+          name="sh"
+          type="range"
+          min="0"
+          max="100"
+          value="0"
+          onchange="changeFilter()"
+        />
+        <div class="helper">0 - 100 (default: 0)</div>
+      </div>
+    </div>
+    <div>
+      <input
+        id="clear"
+        name="clear"
+        type="button"
+        onClick="clearFilters()"
+        value="Сбросить"
+      />
+    </div>
+    <div id="image-container">
+      <img
+        src="https://i.pinimg.com/originals/de/f6/60/def66071cae2c22fbb90e6b7c4a1ee97.jpg"
+        alt="img"
+      />
+      <svg id="path1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 500">
+        <defs>
+          <filter id="convolve4">
+            <feConvolveMatrix
+              id="cm"
+              order="3"
+              kernelMatrix="-0 -0 -0 -0 1 -0 -0 -0 -0"
+            />
+          </filter>
+        </defs>
+      </svg>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>

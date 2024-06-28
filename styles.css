@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+input[type="range"] {
+  margin: 0;
+  width: 400px;
+}
+input[type="button"] {
+  margin: 5px;
+}
+label {
+  width: 110px;
+}
+img {
+  width: 50%;
+  height: 50%;
+}
+h1 {
+  margin-left: 5px;
+}
+
+.fx-slider {
+  margin: 5px;
+  display: flex;
+  align-items: center;
+}
+#image-container {
+  margin: 5px;
+  transition: 0.5s;
+}
+.helper {
+  line-height: 1.2;
+  font-size: 12px;
+  color: gray;
+}
+.first-letter {
+  font-weight: bold;
+  color: red;
+}
