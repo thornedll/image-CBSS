@@ -10,21 +10,35 @@ input[type="range"] {
 input[type="button"] {
   margin: 5px;
 }
+input[type="number"] {
+  width: 70px;
+  height: 30px;
+}
 label {
   width: 110px;
 }
 img {
   width: 50%;
-  height: 50%;
 }
 h1 {
   margin-left: 5px;
+}
+i {
+  cursor: pointer;
 }
 
 .fx-slider {
   margin: 5px;
   display: flex;
+  align-items: baseline;
+  gap: 5px;
+  padding-bottom: 3px;
+}
+.fx-slider .number-input {
+  margin-left: 10px;
+  display: flex;
   align-items: center;
+  gap: 10px;
 }
 #image-container {
   margin: 5px;

@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="initial-scale=1.0" />
     <title>image-CBSS</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -15,12 +19,30 @@
           id="ct"
           name="ct"
           type="range"
+          class="form-control-range"
           min="0"
           max="200"
           value="100"
           onchange="changeFilter()"
         />
         <div class="helper">0 - 200 (default: 100)</div>
+      </div>
+      <div class="number-input">
+        <input
+          id="ct-text"
+          name="ct-text"
+          class="form-control"
+          type="number"
+          value="100"
+          min="0"
+          max="200"
+          onchange="changeFilter(false)"
+        />
+        <i class="glyphicon glyphicon-plus" onclick="incrementValue('ct')"></i>
+        <i
+          class="glyphicon glyphicon-minus"
+          onclick="incrementValue('ct', false)"
+        ></i>
       </div>
     </div>
     <div class="fx-slider">
@@ -37,6 +59,23 @@
         />
         <div class="helper">0 - 200 (default: 100)</div>
       </div>
+      <div class="number-input">
+        <input
+          id="br-text"
+          name="br-text"
+          class="form-control"
+          type="number"
+          value="100"
+          min="0"
+          max="200"
+          onchange="changeFilter(false)"
+        />
+        <i class="glyphicon glyphicon-plus" onclick="incrementValue('br')"></i>
+        <i
+          class="glyphicon glyphicon-minus"
+          onclick="incrementValue('br', false)"
+        ></i>
+      </div>
     </div>
     <div class="fx-slider">
       <label for="st"><span class="first-letter">S</span>aturation</label>
@@ -51,6 +90,23 @@
           onchange="changeFilter()"
         />
         <div class="helper">0 - 200 (default: 100)</div>
+      </div>
+      <div class="number-input">
+        <input
+          id="st-text"
+          name="st-text"
+          class="form-control"
+          type="number"
+          value="100"
+          min="0"
+          max="200"
+          onchange="changeFilter(false)"
+        />
+        <i class="glyphicon glyphicon-plus" onclick="incrementValue('st')"></i>
+        <i
+          class="glyphicon glyphicon-minus"
+          onclick="incrementValue('st', false)"
+        ></i>
       </div>
     </div>
     <div class="fx-slider">
@@ -67,11 +123,29 @@
         />
         <div class="helper">0 - 100 (default: 0)</div>
       </div>
+      <div class="number-input">
+        <input
+          id="sh-text"
+          name="sh-text"
+          class="form-control"
+          type="number"
+          value="0"
+          min="0"
+          max="100"
+          onchange="changeFilter(false)"
+        />
+        <i class="glyphicon glyphicon-plus" onclick="incrementValue('sh')"></i>
+        <i
+          class="glyphicon glyphicon-minus"
+          onclick="incrementValue('sh', false)"
+        ></i>
+      </div>
     </div>
     <div>
       <input
         id="clear"
         name="clear"
+        class="btn"
         type="button"
         onClick="clearFilters()"
         value="Reset"
@@ -82,7 +156,7 @@
         src="https://i.pinimg.com/originals/de/f6/60/def66071cae2c22fbb90e6b7c4a1ee97.jpg"
         alt="img"
       />
-      <svg id="path1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 500">
+      <svg id="path1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0">
         <defs>
           <filter id="convolve4">
             <feConvolveMatrix
